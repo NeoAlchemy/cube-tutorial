@@ -1,0 +1,20 @@
+<table mat-table [dataSource]="ollDataArray">
+  <ng-container matColumnDef="algorithm">
+    <th mat-header-cell *matHeaderCellDef> Algorithm </th>
+    <td mat-cell *matCellDef="let element"> {{element.algorithm}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="image">
+    <th mat-header-cell *matHeaderCellDef> Image </th>
+    <td mat-cell *matCellDef="let element"> <cube notation="{{element.notation}}"></cube> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="notation">
+    <th mat-header-cell *matHeaderCellDef> Notation </th>
+    <td mat-cell *matCellDef="let element"> {{element.notation}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div #elementId></div>
