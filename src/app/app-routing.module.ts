@@ -7,6 +7,9 @@ import { BeginnerF2lComponent } from './beginner-f2l/beginner-f2l.component';
 import { BeginnerOllComponent } from './beginner-oll/beginner-oll.component';
 import { BeginnerPllComponent } from './beginner-pll/beginner-pll.component';
 import { BeginnerCfopComponent } from './beginner-cfop/beginner-cfop.component';
+import { AdvancedCfopComponent } from './advanced-cfop/advanced-cfop.component';
+import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
+
 
 const routes: Routes = [
   {path: 'main', component: MainComponent},
@@ -16,6 +19,8 @@ const routes: Routes = [
   {path: 'beginner-f2l', component: BeginnerF2lComponent},
   {path: 'beginner-oll', component: BeginnerOllComponent},
   {path: 'beginner-pll', component: BeginnerPllComponent},
+  {path: 'advanced-cfop', component: AdvancedCfopComponent},
+  {path: 'advanced-pll', component: AdvancedPllComponent},
   {path: '', redirectTo: '/main', pathMatch: 'full'}
 ];
 
