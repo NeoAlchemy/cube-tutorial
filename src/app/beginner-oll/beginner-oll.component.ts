@@ -8,6 +8,7 @@ export interface DisplayElement {
 }
 
 const DISPLAY_DATA: DisplayElement[] = [
+  {algorithm: 'Dot Shape', notation: "F R U R' U' F' f R U R' U' f'"},
   {algorithm: 'oll-26', notation: "R U2 R' U' R U' R'"},
   {algorithm: 'oll-21', notation: "(R U2 R') (U' R U R') (U' R U' R')"},
 ];
