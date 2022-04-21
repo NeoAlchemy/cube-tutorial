@@ -8,9 +8,17 @@ export interface DisplayElement {
 }
 
 const DISPLAY_DATA: DisplayElement[] = [
-  {algorithm: 'Dot Shape', notation: "F R U R' U' F' f R U R' U' f'"},
-  {algorithm: 'oll-26', notation: "R U2 R' U' R U' R'"},
-  {algorithm: 'oll-21', notation: "(R U2 R') (U' R U R') (U' R U' R')"},
+  {algorithm: 'Dot Shape', notation: "(F R U R' U' F') (f R U R' U' f')"},
+  {algorithm: 'Line Shape', notation: "F R U R' U' F'"},
+  {algorithm: 'L-Shape', notation: "f R U R' U' f'"},
+  {algorithm: 'Antisune', notation: "R U2 R' U' R U' R'"},
+  {algorithm: 'H', notation: "R U R' U R U' R' U R U2 R'"},
+  {algorithm: 'H', notation: "F (R U R' U') (R U R' U') (R U R' U') F'"},
+  {algorithm: 'L', notation: "F R' F' r U R U' r'"},
+  {algorithm: 'Pi', notation: "R U2 R2 U' R2 U' R2 U2 R"},
+  {algorithm: 'Sune', notation: "R U R' U R U2 R'"},
+  {algorithm: 'T', notation: "r U R' U' r' F R F'"},
+  {algorithm: 'U', notation: "R2 D R' U2 R D' R' U2 R'"},
 ];
 
 @Component({
