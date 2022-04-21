@@ -1,9 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-  .basket(#000, #444, #222, 40px);
-  color: white;
-}
+/* VARIABLES */
+@marginEdge: 50px;
 
+/* FUNCTIONS */
 .basket(@background, @to-right, @to-left, @size:25px) {
   background: linear-gradient(45deg, @to-right 12%, transparent 0, transparent 88%, @to-right 0),
               linear-gradient(135deg, transparent 37%, @to-left 0, @to-left 63%, transparent 0),
@@ -12,20 +10,46 @@ html {
   background-size: @size @size;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.button(@space) {
+  margin: @space;
+  margin-bottom: @marginEdge;
+}
+
+/* STYLE */
+html {
+  .basket(#000, #444, #222, 40px);
+  color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 section {
-  display: table;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100%
 }
 
-.button-row a {
-  margin: 10px;
-}
-
-.button-row {
-  display: table-row;
-  width: 490px;
+.row {
   text-align: center;
+  a {
+    .button(10px)
+  }
+}
+
+.mat-table {
+  margin: @marginEdge;
+  text-align: center;
+}
+
+div.cube {
+  display: inline;
+  vertical-align: bottom;
 }
