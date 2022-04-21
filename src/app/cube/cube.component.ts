@@ -7,6 +7,8 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class CubeComponent {
   @Input() notation: string = "";
+  @Input() arrows: string = "";
+  @Input() orient: string = "";
 
   constructor(public element: ElementRef) {}
 }
