@@ -19,8 +19,6 @@ import { BeginnerPllComponent } from './beginner-pll/beginner-pll.component';
 import { BeginnerCfopComponent } from './beginner-cfop/beginner-cfop.component';
 import { SafePipe } from './safe.pipe';
 import { CubeComponent } from './cube/cube.component';
-import { BeginnerF2lRepetitiveComponent } from './beginner-f2l-repetitive/beginner-f2l-repetitive.component';
-import { BeginnerF2lIntuitiveComponent } from './beginner-f2l-intuitive/beginner-f2l-intuitive.component';
 import { AdvancedCfopComponent } from './advanced-cfop/advanced-cfop.component';
 import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
 
@@ -37,8 +35,6 @@ import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
     BeginnerCfopComponent,
     SafePipe,
     CubeComponent,
-    BeginnerF2lRepetitiveComponent,
-    BeginnerF2lIntuitiveComponent,
     AdvancedCfopComponent,
     AdvancedPllComponent
   ],
