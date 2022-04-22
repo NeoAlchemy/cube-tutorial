@@ -1,5 +1,26 @@
 <section>
   <div class="row">
+    <mat-table [dataSource]="oellDataArray">
+      <ng-container matColumnDef="algorithm">
+        <mat-header-cell *matHeaderCellDef> Algorithm </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.algorithm}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="image">
+        <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <cube mask="OELL" notation="{{element.notation}}"></cube> </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="notation">
+        <mat-header-cell *matHeaderCellDef> Notation </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.notation}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  <div class="row">
     <mat-table [dataSource]="ollDataArray">
       <ng-container matColumnDef="algorithm">
         <mat-header-cell *matHeaderCellDef> Algorithm </mat-header-cell>
@@ -8,7 +29,7 @@
 
       <ng-container matColumnDef="image">
         <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
-        <mat-cell *matCellDef="let element"> <cube notation="{{element.notation}}"></cube> </mat-cell>
+        <mat-cell *matCellDef="let element"> <cube mask="OLL" notation="{{element.notation}}"></cube> </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="notation">

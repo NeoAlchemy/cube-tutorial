@@ -9,6 +9,7 @@ export class CubeComponent {
   @Input() notation: string = "";
   @Input() arrows: string = "";
   @Input() orient: string = "";
+  @Input() mask: string = "";
 
   constructor(public element: ElementRef) {}
 }

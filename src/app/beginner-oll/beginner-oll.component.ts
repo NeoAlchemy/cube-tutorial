@@ -7,10 +7,13 @@ export interface DisplayElement {
   notation: string;
 }
 
-const DISPLAY_DATA: DisplayElement[] = [
+const OELL_DISPLAY_DATA: DisplayElement[] = [
   {algorithm: 'Dot Shape', notation: "(F R U R' U' F') (f R U R' U' f')"},
   {algorithm: 'Line Shape', notation: "F R U R' U' F'"},
   {algorithm: 'L-Shape', notation: "f R U R' U' f'"},
+];
+
+const OLL_DISPLAY_DATA: DisplayElement[] = [
   {algorithm: 'Antisune', notation: "R U2 R' U' R U' R'"},
   {algorithm: 'H', notation: "R U R' U R U' R' U R U2 R'"},
   {algorithm: 'H', notation: "F (R U R' U') (R U R' U') (R U R' U') F'"},
@@ -28,7 +31,8 @@ const DISPLAY_DATA: DisplayElement[] = [
 })
 export class BeginnerOllComponent implements AfterViewInit {
 
-  ollDataArray = DISPLAY_DATA;
+  oellDataArray = OELL_DISPLAY_DATA;
+  ollDataArray = OLL_DISPLAY_DATA;
   displayedColumns: string[] = ['algorithm', 'image', 'notation']
 
   @ViewChildren(CubeComponent) cubes!: QueryList<CubeComponent>;
@@ -37,10 +41,11 @@ export class BeginnerOllComponent implements AfterViewInit {
     this.cubes.forEach((r) => {
       cubePNG(r.element.nativeElement, {
         view: 'plan',
-        mask: Masking.OLL,
+        mask: (r.mask == "OLL") ? Masking.OLL : Masking.OELL,
         case: r.notation
       })
     })
+
   }
 
 }
