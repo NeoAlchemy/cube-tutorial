@@ -12,12 +12,14 @@
 
       <ng-container matColumnDef="image">
         <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
-        <mat-cell mat-cell *matCellDef="let element"> <cube notation="{{element.notation}}" arrows="{{element.arrows}}" orient="{{element.orient}}"></cube> </mat-cell>
+        <mat-cell mat-cell *matCellDef="let element"> <cube notation="{{element.notations[0]}}" arrows="{{element.arrows}}" orient="{{element.orient}}"></cube> </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="notation">
         <mat-header-cell mat-header-cell *matHeaderCellDef> Notation </mat-header-cell>
-        <mat-cell mat-cell *matCellDef="let element"> {{element.notation}} </mat-cell>
+        <mat-cell mat-cell *matCellDef="let element">
+          <app-simple-horizontal-picker [values]="element.notations" ></app-simple-horizontal-picker>
+        </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>

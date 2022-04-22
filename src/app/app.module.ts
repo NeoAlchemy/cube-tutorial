@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 import { MainComponent } from './main/main.component';
 import { CfopComponent } from './cfop/cfop.component';
@@ -21,6 +22,7 @@ import { SafePipe } from './safe.pipe';
 import { CubeComponent } from './cube/cube.component';
 import { AdvancedCfopComponent } from './advanced-cfop/advanced-cfop.component';
 import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
+import { SimpleHorizontalPickerComponent } from './simple-horizontal-picker/simple-horizontal-picker.component';
 
 
 @NgModule({
@@ -36,13 +38,15 @@ import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
     SafePipe,
     CubeComponent,
     AdvancedCfopComponent,
-    AdvancedPllComponent
+    AdvancedPllComponent,
+    SimpleHorizontalPickerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     MatTableModule,
+    MatIconModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
