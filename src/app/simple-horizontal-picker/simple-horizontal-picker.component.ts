@@ -12,7 +12,7 @@ export class SimpleHorizontalPickerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
 
   left(): void {

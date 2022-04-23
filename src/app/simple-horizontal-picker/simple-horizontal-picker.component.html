@@ -1,7 +1,7 @@
-<button (click)="left()" mat-icon-button color="{{getLeftColor()}}">
+<button (click)="left()" *ngIf="values.length > 1" mat-icon-button color="{{getLeftColor()}}">
   <mat-icon>arrow_left</mat-icon>
 </button>
 {{values[index]}}
-<button (click)="right()" mat-icon-button color="{{getRightColor()}}">
+<button (click)="right()" *ngIf="values.length > 1" mat-icon-button color="{{getRightColor()}}">
   <mat-icon>arrow_right</mat-icon>
 </button>
