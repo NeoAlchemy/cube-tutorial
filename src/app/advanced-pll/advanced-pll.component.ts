@@ -19,13 +19,14 @@ const DISPLAY_DATA: DisplayElement[] = [
   { algorithm: "PLL 1 Aa",
     notations: [
       "x L2 D2 L' U' L D2 L' U L'",
-      "y' x' L' U L' D2 L U' L' D2 L2"
+      "y' x' L' U L' D2 L U' L' D2 L2",
+      "r U r' U' r' F r2 U' r' U' r U r' F'"
     ],
     arrows: "",
     orient: "x'"
   },
-  { algorithm: 'PLL 2 Ab', notations: [ "x' L2 D2 L U L' D2 L U' L", "y x L U' L D2 L' U L D2 L2"], arrows: "", orient: "x"},
-  
+  { algorithm: 'PLL 2 Ab', notations: [ "x' L2 D2 L U L' D2 L U' L", "y x L U' L D2 L' U L D2 L2", "U2 l' U' l' U l F' l2 U l U l' U' l F"], arrows: "", orient: "x"},
+
   { algorithm: 'PLL 3 F', notations: [ "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R"], arrows: "U2U8,U8U2-black,U1U7,U7U1-black" },
   { algorithm: 'PLL 4 Ga', notations: [ "R2 U R' U R' U' R U' R2 U' D R' U R D'"], arrows: ""},
   { algorithm: 'PLL 5 Gb', notations: [ "R' U' R U D' R2 U R' U R U' R U' R2 D"], arrows: ""},
@@ -56,7 +57,6 @@ export class AdvancedPllComponent implements AfterViewInit {
 
   ollDataArray = DISPLAY_DATA;
   displayedColumns: string[] = ['algorithm', 'image', 'notation']
-  i = 0;
   favoriteNotation: Map<string, number> = new Map();
 
   @ViewChildren(CubeComponent) cubes!: QueryList<CubeComponent>;

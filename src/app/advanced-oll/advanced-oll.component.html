@@ -1,0 +1,32 @@
+<section>
+  <div class="row">
+    <a mat-raised-button color="primary" type="button" href="/advanced-oll">OLL</a>
+    <div #oll class="cube"></div>
+  </div>
+  <div class="row">
+    <mat-table [dataSource]="ollDataArray">
+      <ng-container matColumnDef="algorithm">
+        <mat-header-cell *matHeaderCellDef> Algorithm </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.algorithm}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="image">
+        <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element"> <cube notation="{{element.notations[0]}}" arrows="{{element.arrows}}" orient="{{element.orient}}"></cube> </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="notation">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Notation </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">
+          <app-simple-horizontal-picker [values]="element.notations" ></app-simple-horizontal-picker>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  <div class="row">
+    <a mat-raised-button color="primary" type="button" href="/beginner-cfop">Back</a>
+  </div>
+</section>
