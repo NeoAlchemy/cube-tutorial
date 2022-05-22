@@ -24,6 +24,7 @@ import { AdvancedCfopComponent } from './advanced-cfop/advanced-cfop.component';
 import { AdvancedPllComponent } from './advanced-pll/advanced-pll.component';
 import { SimpleHorizontalPickerComponent } from './simple-horizontal-picker/simple-horizontal-picker.component';
 import { AdvancedOllComponent } from './advanced-oll/advanced-oll.component';
+import { AdvancedCrossComponent } from './advanced-cross/advanced-cross.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { AdvancedOllComponent } from './advanced-oll/advanced-oll.component';
     AdvancedCfopComponent,
     AdvancedPllComponent,
     SimpleHorizontalPickerComponent,
-    AdvancedOllComponent
+    AdvancedOllComponent,
+    AdvancedCrossComponent
   ],
   imports: [
     BrowserModule,
